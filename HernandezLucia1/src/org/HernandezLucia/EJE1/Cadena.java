@@ -3,7 +3,7 @@ package org.HernandezLucia.EJE1;
 import java.util.Scanner;
 
 public class Cadena {
-	static String cadena="Hola amigos vamos a quitar una letra";
+	static String cadena="Hola amigos vamos a quitar una letra"; 
 	static Scanner scan=new Scanner(System.in);
 	 char c='o';
 	public Cadena() {
