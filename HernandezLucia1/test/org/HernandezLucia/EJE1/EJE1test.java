@@ -112,7 +112,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-x-");
 
 		// ACT
-		actual.quitar1("x");
+		actual.quitar1('x');
 
 		// ASSERT
 		assertEquals("--", actual.getCadena());
@@ -124,7 +124,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-x-x-y-xxx-");
 
 		// ACT
-		actual.quitar1("x");
+		actual.quitar1('x');
 
 		// ASSERT
 		assertEquals("---y--", actual.getCadena());
@@ -136,7 +136,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("abecedario");
 
 		// ACT
-		actual.quitar1("x");
+		actual.quitar1('x');
 
 		// ASSERT
 		assertEquals("abecedario", actual.getCadena());
@@ -150,7 +150,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-1x-2x-3x-");
 
 		// ACT
-		actual.quitar2("x",1);
+		actual.quitar2('x',1);
 
 		// ASSERT
 		assertEquals("-1-2x-3x-", actual.getCadena());
@@ -162,7 +162,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-1x-2x-3x-");
 
 		// ACT
-		actual.quitar2("x",2);
+		actual.quitar2('x',2);
 
 		// ASSERT
 		assertEquals("-1-2-3x-", actual.getCadena());
@@ -174,7 +174,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-1x-2x-3x-");
 
 		// ACT
-		actual.quitar2("x",7);
+		actual.quitar2('x',7);
 
 		// ASSERT
 		assertEquals("-1-2-3-", actual.getCadena());
@@ -186,7 +186,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-1x-2x-3x-");
 
 		// ACT
-		actual.quitar2("x",0);
+		actual.quitar2('x',0);
 
 		// ASSERT
 		assertEquals("-1x-2x-3x-", actual.getCadena());
@@ -198,7 +198,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-1x-2x-3x-");
 
 		// ACT
-		actual.quitar2("x",-1);
+		actual.quitar2('x',-1);
 
 		// ASSERT
 		assertEquals("-1x-2x-3x-", actual.getCadena());

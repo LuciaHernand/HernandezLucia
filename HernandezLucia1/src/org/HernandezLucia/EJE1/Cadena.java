@@ -1,14 +1,12 @@
 package org.HernandezLucia.EJE1;
 
-import java.util.Scanner;
 
 public class Cadena {
-	static String cadena="Hola amigos vamos a quitar una letra"; 
-	static Scanner scan=new Scanner(System.in);
-	 char c='o';
+	private   String cadena;
+	
 	public Cadena() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public Cadena(String cadena) {
@@ -34,23 +32,25 @@ public class Cadena {
 		this.cadena = this.cadena + cadena;
 	}
 
-	public static void quitar1(String d) {
+	public static void quitar1(	char d) {
 		
 	
 	
-			cadena=cadena.replace(d, "");
-			System.out.println(cadena);
-		
+		/*
+		 * cadena=cadena.replace(d,""); System.out.println(cadena);
+		 */
 		
 	}
 	
-	public static void quitar2(String c,int i) {
+	public static void quitar2(char c,int i) {
 	
-		for(int x=0;x<i;x++) {
-		
-			cadena=cadena.replaceFirst(c, "");
-			
-		}System.out.println(cadena);
+		/*
+		 * for(int x=0;x<i;x++) {
+		 * 
+		 * cadena=cadena.replaceFirst(c, "");
+		 * 
+		 * }System.out.println(cadena);
+		 */
 		
 	}
 	public static void main(String[] args) {
