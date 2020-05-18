@@ -2,14 +2,20 @@ package org.HernandezLucia.T9;
 public class Prueba {
     public static void main(String[] args) {
         new Prueba().f();
-        new Prueba().espaciado();
-        new Prueba().refactorizacion();
+        
     }
 
     // Pintar título, cuerpo y final
     private void f() {
         
-        // Raya encabezado superior
+        tema1();
+        espaciado();
+        refactorizacion();
+      
+    }
+
+	private void tema1() {
+		// Raya encabezado superior
         encabezado();
         
         titulo("TEMA 1. CONTROL de VERSIONES");
@@ -30,9 +36,7 @@ public class Prueba {
         
 
         encabezado();
-
-      
-    }
+	}
 
 	private void titulo(String titulo) {
 		System.out.println(titulo);
