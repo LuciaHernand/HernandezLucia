@@ -9,49 +9,49 @@ public class EJE1test {
 	@Test
 	public void cDelante01() {
 		// ARRANGE
-		Cadena actual = new Cadena("caminos");
+		Cadena actual = new Cadena("lapices");
 
 		// ACT
-		actual.cDelante("corre");
+		actual.cDelante("porta");
 
 		// ASSERT
-		assertEquals("correcaminos", actual.getCadena(), "corre+caminos=correcaminos");
+		assertEquals("portalapices", actual.getCadena(), "porta+lapices=portalapices");
 	}
 
 	@Test
 	public void cDelante02() {
 		// ARRANGE
-		Cadena actual = new Cadena("algo");
+		Cadena actual = new Cadena("aguas");
 
 		// ACT
-		actual.cDelante("");
+		actual.cDelante("par");
 
 		// ASSERT
-		assertEquals("algo", actual.getCadena(), "NULL + algo = algo");
+		assertEquals("paraguas", actual.getCadena(), "para + aguas = paraguas");
 	}
 
 	@Test
 	public void cDelante03() {
 		// ARRANGE
-		Cadena actual = new Cadena("");
+		Cadena actual = new Cadena("baja");
 
 		// ACT
-		actual.cDelante("algo");
+		actual.cDelante("mar");
 
 		// ASSERT
-		assertEquals("algo", actual.getCadena(), "algo + NULL = algo");
+		assertEquals("bajamar", actual.getCadena(), "baja + mar = bajamar");
 	}
 
 	@Test
 	public void cDelante04() {
 		// ARRANGE
-		Cadena actual = new Cadena("");
+		Cadena actual = new Cadena("porta");
 
 		// ACT
-		actual.cDelante("");
+		actual.cDelante("monedas");
 
 		// ASSERT
-		assertEquals("", actual.getCadena(), "NULL + NULL = NULL");
+		assertEquals("monedasporta", actual.getCadena(), "monedas + porta = monedasporta");
 	}
 
 	// ==========================================================================
@@ -71,25 +71,25 @@ public class EJE1test {
 	@Test
 	public void cDetras02() {
 		// ARRANGE
-		Cadena actual = new Cadena("algo");
+		Cadena actual = new Cadena("porta");
 
 		// ACT
-		actual.cDetras("");
+		actual.cDetras("monedas");
 
 		// ASSERT
-		assertEquals("algo", actual.getCadena(), "algo + NULL = algo");
+		assertEquals("portamonedas", actual.getCadena(), "porta + monedas = portamonedas");
 	}
 
 	@Test
 	public void cDetras03() {
 		// ARRANGE
-		Cadena actual = new Cadena("");
+		Cadena actual = new Cadena("para");
 
 		// ACT
-		actual.cDetras("algo");
+		actual.cDetras("brisas");
 
 		// ASSERT
-		assertEquals("algo", actual.getCadena(), "NULL + algo = algo");
+		assertEquals("parabrisas", actual.getCadena(), "para + brisas = parabrisas");
 	}
 
 	@Test
