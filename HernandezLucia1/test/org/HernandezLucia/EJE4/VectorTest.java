@@ -17,39 +17,43 @@ private Vector vector;
 	}
 	
 	@Test
-	public void ordenar01() throws InputDataException{
+	public void ordenar1() throws InputDataException{
 		//ACT
 		int[] array = {8,5,3};
 		int[] esperado = {3,5,8};
-		int[] res = this.vector.ordenar(array);
+		int[] resultado = this.vector.ordenar(array);
 		
 		//ARRANGE
-		assertArrayEquals(esperado, res);//arrays iguales
+		assertArrayEquals(esperado, resultado);
+		//Con esto lo que hacemos es revisar que la ordenacion sea correcta
 	}
 	
 	@Test
-	public void ordenar02() throws InputDataException{
+	public void ordenar2() throws InputDataException{
 		//ACT
-		int[] array = {4,5,9};
+		int[] array = {9,5,4};
+		int[] esperado = {4,5,9};
+		//ARRANGE
+		assertArrayEquals(esperado,this.vector.ordenar(array));
+	}
+	
+	@Test
+	public void ordenar3() throws InputDataException{
+		//Vector vacio, devuelve exception
+		//ACT
+		int[] array = {};
 		
 		//ARRANGE
 		assertThrows(InputDataException.class, ()->this.vector.ordenar(array));
 	}
 	
 	@Test
-	public void ordenar03() throws InputDataException{
-		//ACT
-		int[] array = {8,6,2};
+	public void ordenar4() throws InputDataException{
 		
-		//ARRANGE
-		assertThrows(InputDataException.class, ()->this.vector.ordenar(array));
-	}
-	
-	@Test
-	public void ordenar04() throws InputDataException{
+		//Vector con mas de 5000 elementos, devuelve exception
 		//ACT
-		int[] array = new int[100];
-		for(int i=0; i<100; i++) {
+		int[] array = new int[5001];
+		for(int i=0; i<array.length; i++) {
 			array[i] = i;
 		}
 

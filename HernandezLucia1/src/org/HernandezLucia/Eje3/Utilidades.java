@@ -1,6 +1,6 @@
 package org.HernandezLucia.Eje3;
 
-public class Util {
+public class Utilidades {
 
 	/**
 	 * Comprueba si un número es o no primo
