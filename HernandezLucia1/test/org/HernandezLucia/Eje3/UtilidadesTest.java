@@ -16,46 +16,47 @@ private Utilidades utilidades;
 	}
 
 	@Test
-	public void esPrimo01() throws NumeroException {
-		assertThrows(NumeroException.class, ()-> this.utilidades.esPrimo(-1));
+	public void esPrimo1() throws NumeroException {
+		assertThrows("-1 Hace saltar exception", NumeroException.class,()-> this.utilidades.esPrimo(-1));
 		//-1 Hace saltar exception
-	}
-
-	@Test
-	public void esPrimo02() throws NumeroException {
-		assertFalse(this.utilidades.esPrimo(0));
-		// "0 NO es primo"
-	}
-
-	@Test
-	public void esPrimo03() throws NumeroException {
-		assertFalse(this.utilidades.esPrimo(1));
-		// "1 NO es primo"
 		
 	}
 
 	@Test
-	public void esPrimo04() throws NumeroException {
-		assertTrue(this.utilidades.esPrimo(999983));
-	
-	// "999983 es primo"
+	public void esPrimo2() throws NumeroException {
+		assertFalse("0 NO es primo",this.utilidades.esPrimo(0));
+		// 
 	}
 
 	@Test
-	public void esPrimo05() throws NumeroException {
-		assertFalse(this.utilidades.esPrimo(999999));
-	//"999999 NO es primo"
+	public void esPrimo3() throws NumeroException {
+		assertFalse("1 NO es primo",this.utilidades.esPrimo(1));
+		// 
+		
+	}
+
+	@Test
+	public void esPrimo4() throws NumeroException {
+		assertTrue("999983 es primo",this.utilidades.esPrimo(999983));
+	
+	// 
+	}
+
+	@Test
+	public void esPrimo5() throws NumeroException {
+		assertFalse("999999 NO es primo",this.utilidades.esPrimo(999999));
+	//
 	}
 	
 	@Test
 	public void esPrimo06() throws NumeroException {
-		assertFalse(this.utilidades.esPrimo(1000000));
-		//"1000000 NO es primo"
+		assertFalse("1000000 NO es primo",this.utilidades.esPrimo(1000000));
+		//
 	}
 	
 	@Test
-	public void esPrimo07() throws NumeroException {
-		assertThrows(NumeroException.class, ()-> this.utilidades.esPrimo(1000001));
-// "1000001 hace saltar NumeroException"
+	public void esPrimo7() throws NumeroException {
+		assertThrows("1000001 hace saltar NumeroException",NumeroException.class, ()-> this.utilidades.esPrimo(1000001));
+// 
 	}
 }

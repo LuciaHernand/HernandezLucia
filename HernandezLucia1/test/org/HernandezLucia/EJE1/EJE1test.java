@@ -92,17 +92,7 @@ public class EJE1test {
 		assertEquals("parabrisas", actual.getCadena(), "para + brisas = parabrisas");
 	}
 
-	@Test
-	public void cDetras04() {
-		// ARRANGE
-		Cadena actual = new Cadena("");
 
-		// ACT
-		actual.cDetras("");
-
-		// ASSERT
-		assertEquals("", actual.getCadena(), "NULL + NULL = NULL");
-	}
 
 	// ==========================================================================
 
@@ -124,14 +114,15 @@ public class EJE1test {
 		Cadena actual = new Cadena("-x-x-y-xxx-");
 
 		// ACT
-		actual.quitar1('x');
+		actual.quitar1('y');
 
 		// ASSERT
-		assertEquals("---y--", actual.getCadena());
+		assertEquals("-x-x--xxx-", actual.getCadena());
 	}
 
 	@Test
 	public void quitarChar03() {
+		//No quita nada porque el valor no existe en la cadena
 		// ARRANGE
 		Cadena actual = new Cadena("abecedario");
 
@@ -150,7 +141,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-1x-2x-3x-");
 
 		// ACT
-		actual.quitar2('x',1);
+		actual.quitar2('x',2);
 
 		// ASSERT
 		assertEquals("-1-2x-3x-", actual.getCadena());
@@ -162,7 +153,7 @@ public class EJE1test {
 		Cadena actual = new Cadena("-1x-2x-3x-");
 
 		// ACT
-		actual.quitar2('x',2);
+		actual.quitar2('x',1);
 
 		// ASSERT
 		assertEquals("-1-2-3x-", actual.getCadena());
@@ -194,6 +185,7 @@ public class EJE1test {
 	
 	@Test
 	public void quitarCharInt05() {
+		//deberia saltar error
 		// ARRANGE
 		Cadena actual = new Cadena("-1x-2x-3x-");
 

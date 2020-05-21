@@ -7,13 +7,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-public class UtilidadesTest {
+public class Eje2Test {
 	
-		private Utilidades utils;
+		private Eje2 utils;
 		
 		@Before
 		public void setUp() {
-			this.utils = new Utilidades();
+			this.utils = new Eje2();
 		}
 		
 		@Test
